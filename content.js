@@ -7,7 +7,7 @@
    WHAT YOU CAN DO HERE
    - Add a new destination:  copy the "NEW DESTINATION TEMPLATE" at the bottom
                              and paste it at the end of the "destinations" list.
-   - Add photographs:        copy image files into the "images" folder, then
+   - Add photographs:        copy image files next to index.html, then
                              add a line to that destination's "photos" list.
    - Write a travel story:   add paragraphs to that destination's "story".
    - Add videos:             add a line to that destination's "videos" list
@@ -48,17 +48,16 @@ window.SITE = {
                  screens. Leave them empty to use the files above everywhere.
   ------------------------------------------------------------------------ */
   hero: {
-    video: "videos/hero-loop.mp4",
-    poster: "images/hero-poster.jpg",
+    video: "hero-loop.mp4",
+    poster: "hero-poster.jpg",
     videoWide: "",
     posterWide: ""
   },
 
   /* ---- Optional photographs for the home page and About section --------
      These are empty on purpose: no photograph is used on the home page or in
-     the About section unless you choose one. To use one, copy it into the
-     "images" folder and write its file name here, for example
-     portrait: "images/my-portrait.jpg"
+     the About section unless you choose one. To use one, copy it next to
+     index.html and write its file name here, for example
   ------------------------------------------------------------------------ */
   images: {
     portrait: "",
@@ -85,17 +84,17 @@ window.SITE = {
                readers; caption is optional). w and h are the picture's size
                in pixels (optional; they keep the gallery from jumping while
                photographs load). For a faster gallery, a smaller copy named
-               "sm-" + the file name (for example images/sm-my-photo.jpg,
+               "sm-" + the file name (for example sm-my-photo.jpg,
                about 720 pixels wide) is used for thumbnails if it exists.
      videos    { title, youtube: "VIDEO_ID" }
                { title, vimeo: "VIDEO_ID" }
-               { title, file: "videos/clip.mp4", poster: "images/clip.jpg" }
+               { title, file: "clip.mp4", poster: "clip.jpg" }
                VIDEO_ID is the part after v= in a YouTube link.
   ------------------------------------------------------------------------ */
   destinations: [
     {
       id: "annapurna-base-camp",
-      cover: "images/abc-lodge-2022.jpg",   // photograph shown on the Experiences list
+      cover: "abc-lodge-2022.jpg",   // photograph shown on the Experiences list
       name: "Annapurna Base Camp",
       region: "Annapurna region, Nepal",
       type: "Trek",
@@ -161,10 +160,10 @@ window.SITE = {
       },
 
       photos: [
-        { src: "images/abc-sign-2022.jpg", w: 1246, h: 1432,  alt: "At the Annapurna Base Camp sign, 4,130 metres, with prayer flags and snow peaks behind", caption: "" },
-        { src: "images/abc-peak-2022.jpg", w: 921, h: 1600,  alt: "Smiling trekker in sunglasses in front of a snow-covered peak and a blue-roofed lodge", caption: "" },
-        { src: "images/abc-snow-2022.jpg", w: 1225, h: 1395,  alt: "Sitting in the snow outside a mountain lodge at Annapurna Base Camp", caption: "" },
-        { src: "images/abc-lodge-2022.jpg", w: 1241, h: 1415, alt: "Standing in front of a lodge with snow-covered Annapurna peaks behind", caption: "" }
+        { src: "abc-sign-2022.jpg", w: 1246, h: 1432,  alt: "At the Annapurna Base Camp sign, 4,130 metres, with prayer flags and snow peaks behind", caption: "" },
+        { src: "abc-peak-2022.jpg", w: 921, h: 1600,  alt: "Smiling trekker in sunglasses in front of a snow-covered peak and a blue-roofed lodge", caption: "" },
+        { src: "abc-snow-2022.jpg", w: 1225, h: 1395,  alt: "Sitting in the snow outside a mountain lodge at Annapurna Base Camp", caption: "" },
+        { src: "abc-lodge-2022.jpg", w: 1241, h: 1415, alt: "Standing in front of a lodge with snow-covered Annapurna peaks behind", caption: "" }
       ],
       videos: [
         // { title: "Reaching Annapurna Base Camp", youtube: "VIDEO_ID" },
@@ -185,7 +184,7 @@ window.SITE = {
     },
     {
       id: "khumai",
-      cover: "images/khumai-meadow-2023.jpg",   // photograph shown on the Experiences list
+      cover: "khumai-meadow-2023.jpg",   // photograph shown on the Experiences list
       name: "Khumai Danda",
       region: "Kaski, Gandaki Province, Nepal",
       type: "Trek",
@@ -261,17 +260,17 @@ window.SITE = {
       },
 
       photos: [
-        { src: "images/khumai-sign-2023.jpg", w: 1355, h: 1500,   alt: "Standing beside the Great Machhapuchhre Trail welcome board for Khumai Hill, 3,245 metres, with clouds and blue-roofed lodges behind", caption: "" },
-        { src: "images/khumai-flags-2023.jpg", w: 1289, h: 694,  alt: "Prayer flags above green lodges in clear morning light, with snow-covered peaks in the distance", caption: "" },
-        { src: "images/khumai-meadow-2023.jpg", w: 1116, h: 1500, alt: "Smiling on a green meadow with a walking stick, a blue-roofed stone house and snow peaks behind", caption: "" },
-        { src: "images/khumai-trail-2023.jpg", w: 855, h: 1500,  alt: "Horses and mules carrying loads past flags and a welcome sign on a forested hillside", caption: "" },
-        { src: "images/khumai-grass-2023.jpg", w: 1242, h: 688,  alt: "A selfie on a golden grass hillside with a horse grazing behind", caption: "" }
+        { src: "khumai-sign-2023.jpg", w: 1355, h: 1500,   alt: "Standing beside the Great Machhapuchhre Trail welcome board for Khumai Hill, 3,245 metres, with clouds and blue-roofed lodges behind", caption: "" },
+        { src: "khumai-flags-2023.jpg", w: 1289, h: 694,  alt: "Prayer flags above green lodges in clear morning light, with snow-covered peaks in the distance", caption: "" },
+        { src: "khumai-meadow-2023.jpg", w: 1116, h: 1500, alt: "Smiling on a green meadow with a walking stick, a blue-roofed stone house and snow peaks behind", caption: "" },
+        { src: "khumai-trail-2023.jpg", w: 855, h: 1500,  alt: "Horses and mules carrying loads past flags and a welcome sign on a forested hillside", caption: "" },
+        { src: "khumai-grass-2023.jpg", w: 1242, h: 688,  alt: "A selfie on a golden grass hillside with a horse grazing behind", caption: "" }
       ],
       videos: []
     },
     {
       id: "kori",
-      cover: "images/kori-camp-2024.jpg",   // photograph shown on the Experiences list
+      cover: "kori-camp-2024.jpg",   // photograph shown on the Experiences list
       name: "Kori Danda",
       region: "Kaski, Gandaki Province, Nepal",
       type: "Trek",
@@ -345,17 +344,17 @@ window.SITE = {
       },
 
       photos: [
-        { src: "images/kori-forest-2024.jpg", w: 1125, h: 1500, alt: "Standing with a walking stick and backpack on a leaf-covered path beneath tall moss-covered trees", caption: "" },
-        { src: "images/kori-sign-2024.jpg", w: 1125, h: 1500,   alt: "Wearing a red rain poncho beside a hand-lettered wooden sign at Kori, in cloud, with stone cairns around", caption: "" },
-        { src: "images/kori-camp-2024.jpg", w: 1125, h: 1500,   alt: "Sitting on a bench beside a tent in early light, with snow peaks glowing in the distance", caption: "" },
-        { src: "images/kori-peak-2024.jpg", w: 840, h: 1500,   alt: "Seen from behind, looking up at a snow-covered mountain face lit golden by low sun", caption: "" },
-        { src: "images/kori-selfie-2024.jpg", w: 844, h: 1500, alt: "Smiling selfie in sunglasses with snow peaks in warm light and the moon above", caption: "" }
+        { src: "kori-forest-2024.jpg", w: 1125, h: 1500, alt: "Standing with a walking stick and backpack on a leaf-covered path beneath tall moss-covered trees", caption: "" },
+        { src: "kori-sign-2024.jpg", w: 1125, h: 1500,   alt: "Wearing a red rain poncho beside a hand-lettered wooden sign at Kori, in cloud, with stone cairns around", caption: "" },
+        { src: "kori-camp-2024.jpg", w: 1125, h: 1500,   alt: "Sitting on a bench beside a tent in early light, with snow peaks glowing in the distance", caption: "" },
+        { src: "kori-peak-2024.jpg", w: 840, h: 1500,   alt: "Seen from behind, looking up at a snow-covered mountain face lit golden by low sun", caption: "" },
+        { src: "kori-selfie-2024.jpg", w: 844, h: 1500, alt: "Smiling selfie in sunglasses with snow peaks in warm light and the moon above", caption: "" }
       ],
       videos: []
     },
     {
       id: "mardi-himal",
-      cover: "images/mardi-golden-2024.jpg",   // photograph shown on the Experiences list
+      cover: "mardi-golden-2024.jpg",   // photograph shown on the Experiences list
       name: "Mardi Himal",
       region: "Kaski, Gandaki Province, Nepal",
       type: "Trek",
@@ -471,17 +470,17 @@ window.SITE = {
       },
 
       photos: [
-        { src: "images/mardi-flags-2024.jpg", w: 1125, h: 1500,    alt: "Portrait beside a frost-covered white and red prayer cloth, with a sharp snow-streaked peak behind", caption: "" },
-        { src: "images/mardi-table-2024.jpg", w: 1125, h: 1500,    alt: "A snow-dusted stone table and bench on a ridge, with snow peaks rising through cloud beyond", caption: "" },
-        { src: "images/mardi-standing-2024.jpg", w: 1125, h: 1500, alt: "Standing in a silver puffer jacket and tinted sunglasses, looking toward a pointed peak above a frosted ridge", caption: "" },
-        { src: "images/mardi-golden-2024.jpg", w: 1125, h: 1500,   alt: "A small figure standing on a frosted ridge below a large snow peak glowing gold in low sun, with a band of cloud", caption: "" },
-        { src: "images/mardi-night-2024.jpg", w: 1125, h: 1500,    alt: "At night beside a frosted bench in a rainbow hat holding a cup, with stars above and moonlit peaks over the cloud", caption: "" }
+        { src: "mardi-flags-2024.jpg", w: 1125, h: 1500,    alt: "Portrait beside a frost-covered white and red prayer cloth, with a sharp snow-streaked peak behind", caption: "" },
+        { src: "mardi-table-2024.jpg", w: 1125, h: 1500,    alt: "A snow-dusted stone table and bench on a ridge, with snow peaks rising through cloud beyond", caption: "" },
+        { src: "mardi-standing-2024.jpg", w: 1125, h: 1500, alt: "Standing in a silver puffer jacket and tinted sunglasses, looking toward a pointed peak above a frosted ridge", caption: "" },
+        { src: "mardi-golden-2024.jpg", w: 1125, h: 1500,   alt: "A small figure standing on a frosted ridge below a large snow peak glowing gold in low sun, with a band of cloud", caption: "" },
+        { src: "mardi-night-2024.jpg", w: 1125, h: 1500,    alt: "At night beside a frosted bench in a rainbow hat holding a cup, with stars above and moonlit peaks over the cloud", caption: "" }
       ],
       videos: []
     },
     {
       id: "panchpokhari",
-      cover: "images/panch-shrine-2025.jpg",   // photograph shown on the Experiences list
+      cover: "panch-shrine-2025.jpg",   // photograph shown on the Experiences list
       name: "Panch Pokhari",
       region: "Sindhupalchok, Bagmati Province, Nepal",
       type: "Trek",
@@ -616,11 +615,11 @@ window.SITE = {
       },
 
       photos: [
-        { src: "images/panch-flowers-2025.jpg", w: 842, h: 1500, alt: "Standing with arms open on a ridge of pink wildflowers, looking out over a sea of cloud under a bright blue sky", caption: "" },
-        { src: "images/panch-lake-2025.jpg", w: 861, h: 1500,    alt: "Standing on a rocky shore in a green headscarf, with a still blue lake reflecting the sky and a grassy ridge behind", caption: "" },
-        { src: "images/panch-summit-2025.jpg", w: 844, h: 1500,  alt: "Smiling on a rocky ridge with a small bunch of pink flowers, clouds and green mountainsides below", caption: "" },
-        { src: "images/panch-shrine-2025.jpg", w: 844, h: 1500,  alt: "A pagoda-style shrine with a rust-red roof, strung with colourful prayer flags, below a green mountainside", caption: "" },
-        { src: "images/panch-sign-2025.jpg", w: 844, h: 1500,    alt: "A still mountain lake reflecting a green slope, with a sign reading Sarswatikunda beside the water", caption: "" }
+        { src: "panch-flowers-2025.jpg", w: 842, h: 1500, alt: "Standing with arms open on a ridge of pink wildflowers, looking out over a sea of cloud under a bright blue sky", caption: "" },
+        { src: "panch-lake-2025.jpg", w: 861, h: 1500,    alt: "Standing on a rocky shore in a green headscarf, with a still blue lake reflecting the sky and a grassy ridge behind", caption: "" },
+        { src: "panch-summit-2025.jpg", w: 844, h: 1500,  alt: "Smiling on a rocky ridge with a small bunch of pink flowers, clouds and green mountainsides below", caption: "" },
+        { src: "panch-shrine-2025.jpg", w: 844, h: 1500,  alt: "A pagoda-style shrine with a rust-red roof, strung with colourful prayer flags, below a green mountainside", caption: "" },
+        { src: "panch-sign-2025.jpg", w: 844, h: 1500,    alt: "A still mountain lake reflecting a green slope, with a sign reading Sarswatikunda beside the water", caption: "" }
       ],
       videos: []
     },
@@ -652,8 +651,8 @@ window.SITE = {
         "Second paragraph of the story."
       ],
       photos: [
-        { src: "images/my-new-place-1.jpg", alt: "What the photo shows", caption: "" },
-        { src: "images/my-new-place-2.jpg", alt: "What the photo shows", caption: "" }
+        { src: "my-new-place-1.jpg", alt: "What the photo shows", caption: "" },
+        { src: "my-new-place-2.jpg", alt: "What the photo shows", caption: "" }
       ],
       videos: [
         { title: "My video", youtube: "VIDEO_ID" }

@@ -75,7 +75,7 @@
   /* ----------------------------------------------------------------------
      Experiences: the journey so far, one editorial row per trek
   ---------------------------------------------------------------------- */
-  const smOf = src => (/^images\/[^/]+$/.test(src || '') && !/\/sm-/.test(src)) ? src.replace('images/', 'images/sm-') : src;
+  const smOf = src => (/^[\w.-]+\.jpe?g$/i.test(src || '') && !/^sm-/.test(src)) ? 'sm-' + src : src;   /* small copy (sm-<name>) for thumbnails */
   const ORD = ['First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eighth', 'Ninth', 'Tenth'];
   const treks = D.filter(d => d.feature || d.cover || (d.photos || []).length);
   $('#expList').innerHTML = treks.map((d, i) => {

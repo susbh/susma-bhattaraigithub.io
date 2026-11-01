@@ -1,2 +1,2 @@
-Put your photographs in this folder, then reference them in content.js,
-for example:  photo: "images/annapurna-base-camp.jpg"
+All website files (index.html, style.css, script.js, content.js, photographs, logo and hero video)
+sit together in this one folder. Add new photographs here and list them in content.js.
