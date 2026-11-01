@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Travel with Susma</title>
+<meta name="description" content="Travel with Susma is the portfolio of Susma Bhattarai, a travel content creator in Nepal sharing mountains, trekking, nature and peaceful destinations through photography and storytelling.">
+<meta property="og:title" content="Travel with Susma">
+<meta property="og:description" content="Nature, mountains, trekking and peaceful destinations, told through photography and storytelling from Nepal.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F5F2EB">
+<link rel="icon" href="images/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap bar">
+    <a class="brand" href="#home" aria-label="Travel with Susma, home">
+      <img class="brand-logo" src="images/logo.webp" alt="" width="900" height="656">
+      <span>Travel with Susma</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#journal">Journal</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================== HOME ============================ -->
+<section class="hero" id="home">
+  <div class="hero-stage" id="heroStage">
+    <!-- Background: your own trekking video (videos/hero-loop.mp4). The still image shows
+         first, while the video loads, and stays if video cannot play (set in content.js). -->
+    <div class="hero-media" aria-hidden="true">
+      <img class="hero-poster" id="heroPoster" src="images/hero-poster.jpg" alt="" width="668" height="1450" fetchpriority="high" decoding="async">
+      <video class="hero-video" id="heroVideo" muted loop playsinline preload="none" disablepictureinpicture tabindex="-1"></video>
+      <div class="hero-shade"></div>
+    </div>
+
+    <div class="wrap hero-inner">
+      <!-- EDIT: home page text -->
+      <p class="eyebrow">Travel creator &middot; Nepal</p>
+      <h1>The world is full of stories. I&rsquo;m here to live them.</h1>
+      <p class="lead">Welcome to Travel with Susma &mdash; a personal collection of mountain journeys, meaningful experiences and stories from Nepal and beyond.</p>
+      <div class="actions">
+        <a class="btn btn-light btn-lg" href="#experiences">Explore my journey</a>
+      </div>
+    </div>
+
+    <button class="hero-pause" id="heroPause" type="button" aria-label="Pause background video" hidden>
+      <svg class="i-pause" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+      <svg class="i-play" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+    </button>
+  </div>
+
+</section>
+
+<!-- ============================== ABOUT =========================== -->
+<section class="band" id="about">
+  <div class="wrap about-grid">
+    <div class="about-head">
+      <p class="eyebrow">About</p>
+      <h2>Behind the journey</h2>
+      <figure class="portrait" id="portrait" hidden></figure>
+    </div>
+
+    <div class="about-copy">
+      <!-- EDIT: your story, in your own voice -->
+      <p class="big">I&rsquo;m Susma, a traveller who finds happiness in mountains, nature and the stories that unfold along the way. What started with a trek has gradually become a beautiful part of my life. Through Travel with Susma, I share the places I explore, the moments I experience and the memories I carry.</p>
+
+      <ul class="focus" aria-label="What I share">
+        <li><strong>Nature</strong><span>Forests, rivers, lakes and the details of the landscape.</span></li>
+        <li><strong>Mountains &amp; trekking</strong><span>From village paths to high Himalayan viewpoints.</span></li>
+        <li><strong>Adventure</strong><span>Journeys that ask a little effort and give a lot back.</span></li>
+        <li><strong>Travel storytelling</strong><span>Photographs and words that carry the feeling of a place.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== EXPERIENCES =========================== -->
+<section class="band alt" id="experiences">
+  <div class="wrap">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">Experiences</p>
+        <h2>The journey so far</h2>
+      </div>
+      <p>Five treks in Nepal, in the order I walked them. Open any destination to see its photographs, map and story.</p>
+    </header>
+    <ol class="trek-list" id="expList"></ol>
+    <noscript><p>Please enable JavaScript to view the journey and gallery.</p></noscript>
+  </div>
+</section>
+
+<!-- ========================= PHOTOGRAPHY GALLERY ================== -->
+<section class="band" id="gallery">
+  <div class="wrap">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">Photography</p>
+        <h2>Frames from the journey</h2>
+      </div>
+      <p>Photographs from each trek, exactly as I took them. Tap or click any frame to see it larger.</p>
+    </header>
+    <div class="chips" id="galChips" role="group" aria-label="Filter photographs by destination"></div>
+    <div class="masonry" id="galGrid"></div>
+  </div>
+</section>
+
+<!-- ========================= TRAVEL PHILOSOPHY ==================== -->
+<section class="philo" id="philosophy" aria-labelledby="philoTitle">
+  <div class="wrap philo-grid">
+    <h2 id="philoTitle"><span>Not just places.</span> <em>Feelings, moments and memories.</em></h2>
+    <div class="philo-text">
+      <p>Some journeys stay with us long after we return. The mountains, the trails, the unexpected moments and the quiet beauty of nature &mdash; these are the stories I love to collect.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== JOURNAL ========================= -->
+<section class="band" id="journal">
+  <div class="wrap">
+    <header class="sec-head">
+      <div>
+        <p class="eyebrow">Journal</p>
+        <h2>Stories from the trail</h2>
+      </div>
+      <p>Trek stories, written after the walk. New entries are added here as the journey continues.</p>
+    </header>
+    <ol class="journal-list" id="journalList"></ol>
+  </div>
+</section>
+
+<!-- ============================== CONTACT ========================= -->
+<section class="band alt" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-copy">
+      <p class="eyebrow">Contact</p>
+      <h2>Let&rsquo;s plan a story together</h2>
+      <p class="intro">I&rsquo;m based in Nepal and happy to hear from anyone around the world. Tell me a little about your idea and I&rsquo;ll reply by email.</p>
+      <ul class="plain enq" aria-label="Ways to work together">
+        <li>Travel collaborations</li>
+        <li>Tourism partnerships</li>
+        <li>Hotels and resorts</li>
+        <li>Brand partnerships</li>
+        <li>General enquiries</li>
+      </ul>
+      <div class="mail" id="mailBlock" hidden>
+        <span class="label">Email</span>
+        <a id="mailLink" href="#contact"></a>
+      </div>
+      <div class="social" data-social></div>
+    </div>
+
+    <form class="form" id="contactForm" novalidate>
+      <div class="field">
+        <label for="f-name">Your name</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-org">Organisation <small>(optional)</small></label>
+        <input id="f-org" name="org" type="text" autocomplete="organization">
+      </div>
+      <div class="field wide">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field wide">
+        <label for="f-type">I&rsquo;m getting in touch about</label>
+        <select id="f-type" name="type" required>
+          <option>Travel collaboration</option>
+          <option>Tourism partnership</option>
+          <option>Hotel or resort</option>
+          <option>Brand partnership</option>
+          <option>General enquiry</option>
+        </select>
+      </div>
+      <div class="field wide">
+        <label for="f-msg">Message</label>
+        <textarea id="f-msg" name="message" rows="5" required></textarea>
+      </div>
+      <div class="form-foot wide">
+        <button class="btn" type="submit">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ======================================================================
+     HIDDEN FOR NOW: the old "Collaborations" section. To bring it back, move
+     it out of this comment, above the Contact section, and add a
+     "Collaborations" link to the menu. The styles are still in style.css.
+
+<section class="band" id="collaborations">
+  <div class="wrap">
+    <header class="sec-head">
+      <div><p class="eyebrow">Partnerships</p><h2>Collaborations</h2></div>
+      <p>I'm based in Nepal and open to partnerships with tourism boards, hotels, resorts and travel brands anywhere in the world.</p>
+    </header>
+    <div class="collab-grid">
+      <div><h3>Who I work with</h3><ul class="plain">
+        <li>Tourism boards and destination organisations</li>
+        <li>Hotels, resorts and mountain lodges</li>
+        <li>Trekking, adventure and outdoor brands</li>
+        <li>Travel and lifestyle brands</li>
+      </ul></div>
+      <div><h3>What we can create</h3><ul class="plain">
+        <li>Destination stories and written features</li>
+        <li>Landscape and travel photography</li>
+        <li>Social media content from the trail or the property</li>
+        <li>Trek and itinerary storytelling</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+====================================================================== -->
+
+<!-- ===================== DESTINATION FEATURE PAGE ================ -->
+<!-- Filled in by script.js for any destination that has a "feature" in content.js -->
+<section class="page" id="destPage" hidden></section>
+
+</main>
+
+<!-- ============================== FOOTER ========================== -->
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <img class="foot-logo" src="images/logo.webp" alt="Travel with Susma logo" width="900" height="656">
+      <p>Nature, mountains and peaceful places. Based in Nepal.</p>
+    </div>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="#about">About</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#journal">Journal</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="social" data-social></div>
+  </div>
+  <div class="wrap">
+    <div class="foot-base">
+      <p>&copy; <span id="year">2026</span> Susma Bhattarai. All rights reserved.</p>
+      <a href="#home">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Photo and video viewer -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photograph and video viewer">
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close viewer">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+  </button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 4l-8 8 8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+  </button>
+  <figure class="lb-fig">
+    <div class="lb-stage" id="lbMedia"></div>
+    <figcaption><span id="lbCap"></span><span id="lbCount"></span></figcaption>
+  </figure>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 4l8 8-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+  </button>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Susma Bhattarai","jobTitle":"Travel content creator","homeLocation":{"@type":"Country","name":"Nepal"},"brand":{"@type":"Brand","name":"Travel with Susma"}}
+</script>
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
